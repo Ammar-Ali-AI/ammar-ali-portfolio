@@ -1,88 +1,131 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ammar Ali - AI Data, Evaluation & Linguistic Specialist with experience in LLM evaluation, Arabic linguistic QA, AI safety, multimodal annotation and quality assurance.">
-  <meta name="robots" content="index,follow">
-  <meta name="theme-color" content="#071521">
-  <title>Ammar Ali | AI Data, Evaluation & Linguistic Specialist</title>
-  <style>
-    :root{
-      --bg:#071521;--bg2:#0b1d2b;--panel:#102739;--panel2:#0d2232;
-      --text:#f4f8fb;--muted:#a9bac7;--line:rgba(255,255,255,.10);
-      --teal:#4ed3d0;--blue:#76a6ff;--green:#79dfad;--max:1160px;
-    }
-    *{box-sizing:border-box} html{scroll-behavior:smooth}
-    body{margin:0;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:
-      radial-gradient(circle at 12% 0%,rgba(78,211,208,.11),transparent 32rem),
-      radial-gradient(circle at 92% 9%,rgba(118,166,255,.10),transparent 34rem),
-      linear-gradient(180deg,var(--bg),var(--bg2));line-height:1.6}
-    a{color:inherit;text-decoration:none}.wrap{width:min(calc(100% - 36px),var(--max));margin:auto}
-    nav{position:sticky;top:0;z-index:20;background:rgba(7,21,33,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-    .nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{font-weight:900;letter-spacing:-.03em}.brand i{color:var(--teal);font-style:normal}
-    .links{display:flex;gap:22px;align-items:center;color:var(--muted);font-size:14px}.links a:hover{color:var(--text)}
-    .navbtn,.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 15px;border-radius:12px;border:1px solid var(--line);font-weight:800}
-    .navbtn,.btn.primary{color:#041419;border-color:transparent;background:linear-gradient(135deg,var(--teal),var(--blue))}
-    .hero{padding:105px 0 78px}.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:center}
-    .eyebrow{display:inline-flex;gap:9px;align-items:center;padding:7px 11px;border:1px solid rgba(78,211,208,.28);border-radius:999px;color:var(--teal);font-size:13px;font-weight:800}.dot{width:8px;height:8px;border-radius:50%;background:var(--green)}
-    h1{margin:20px 0 0;font-size:clamp(58px,9vw,106px);line-height:.88;letter-spacing:-.075em}.grad{background:linear-gradient(90deg,var(--text),var(--teal),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
-    .lead{max-width:760px;margin:25px 0 0;color:var(--muted);font-size:20px}.lead strong{color:var(--text)}
-    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.btn{background:rgba(255,255,255,.04)}
-    .signal{padding:28px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(160deg,rgba(16,39,57,.95),rgba(13,34,50,.88));box-shadow:0 28px 80px rgba(0,0,0,.25)}
-    .signal small,.kicker{color:var(--teal);font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}.signal h2{margin:10px 0 20px;font-size:31px;line-height:1.06;letter-spacing:-.04em}
-    .signal-row{padding:13px 0;border-top:1px solid var(--line)}.signal-row b{display:block}.signal-row span{color:var(--muted);font-size:14px}
-    section{padding:82px 0}.section-head{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:end;margin-bottom:34px}h2{margin:8px 0 0;font-size:clamp(38px,5vw,62px);line-height:.98;letter-spacing:-.055em}.desc{margin:0;color:var(--muted);font-size:16px;max-width:660px;justify-self:end}
-    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{padding:24px;border:1px solid var(--line);border-radius:20px;background:rgba(16,39,57,.62)}.card .num{color:var(--teal);font-size:11px;font-weight:900}.card h3{margin:30px 0 9px;font-size:21px;line-height:1.1}.card p{margin:0;color:var(--muted);font-size:14px}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}.tag{padding:5px 8px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:11px;font-weight:700}
-    .timeline{display:grid;gap:12px}.role{display:grid;grid-template-columns:160px 1fr auto;gap:22px;padding:22px;border:1px solid var(--line);border-radius:18px;background:rgba(16,39,57,.52)}.time{color:var(--muted);font-size:13px;font-weight:700}.company{color:var(--teal);font-weight:900;font-size:14px}.role h3{margin:2px 0 8px;font-size:20px}.role p{margin:0;color:var(--muted);font-size:14px}.pill{align-self:start;padding:6px 9px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:11px;font-weight:800}
-    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.project{padding:25px;border:1px solid var(--line);border-radius:20px;background:rgba(13,34,50,.78)}.project h3{margin:6px 0 9px;font-size:23px;letter-spacing:-.03em}.project p{margin:0;color:var(--muted);font-size:14px}.stack{margin-top:16px;color:var(--teal);font-size:12px;font-weight:800}
-    .two{display:grid;grid-template-columns:1fr 1fr;gap:15px}.panel{padding:27px;border:1px solid var(--line);border-radius:22px;background:rgba(16,39,57,.58)}.panel h3{margin:8px 0 8px;font-size:25px}.panel p{margin:0;color:var(--muted)}.list{display:grid;gap:10px;margin-top:18px}.item{display:flex;gap:10px;color:var(--muted);font-size:14px}.check{width:20px;height:20px;flex:0 0 20px;display:grid;place-items:center;border-radius:50%;color:#041419;background:var(--green);font-size:11px;font-weight:900}
-    .chips{display:flex;flex-wrap:wrap;gap:9px}.chip{padding:9px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.03);color:#dfe8ee;font-size:13px;font-weight:750}
-    .cta{padding:55px;border:1px solid rgba(78,211,208,.25);border-radius:30px;text-align:center;background:radial-gradient(circle at 15% 20%,rgba(78,211,208,.13),transparent 32%),radial-gradient(circle at 90% 30%,rgba(118,166,255,.11),transparent 34%),rgba(16,39,57,.65)}.cta h2{max-width:840px;margin-inline:auto}.cta p{max-width:680px;margin:18px auto 0;color:var(--muted)}.cta .actions{justify-content:center}
-    footer{padding:28px 0 42px;color:#7f94a3;font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:22px}
-    @media(max-width:900px){.hero-grid,.section-head,.two{grid-template-columns:1fr}.desc{justify-self:start}.grid3{grid-template-columns:repeat(2,1fr)}.role{grid-template-columns:120px 1fr}.pill{grid-column:2}.projects{grid-template-columns:1fr}}
-    @media(max-width:650px){.links a:not(.navbtn){display:none}.hero{padding-top:76px}.grid3{grid-template-columns:1fr}.role{grid-template-columns:1fr}.pill{grid-column:auto}.cta{padding:34px 20px}.foot{flex-direction:column}}
-  </style>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Person","name":"Ammar Ali","jobTitle":"AI Data, Evaluation & Linguistic Specialist","email":"mailto:2007ammarkhaledali@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Shubra El-Kheima","addressCountry":"EG"},"sameAs":["https://www.linkedin.com/in/ammar-ali-6a572b383/"]}
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7fbff" />
+  <meta name="description" content="Ammar Ali — AI data annotation, LLM evaluation, Arabic localization, multimodal annotation, and quality assurance. Explore experience, skills and selected projects." />
+  <meta property="og:title" content="Ammar Ali | AI Data & Language Projects" />
+  <meta property="og:description" content="Annotation, evaluation, and quality operations across Arabic and English AI data projects." />
+  <meta property="og:type" content="website" />
+  <title>Ammar Ali | AI Data & Language Projects</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<nav><div class="wrap nav"><a class="brand" href="#top">AMMAR <i>ALI</i></a><div class="links"><a href="#expertise">Expertise</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#education">Education</a><a class="navbtn" href="mailto:2007ammarkhaledali@gmail.com">Contact</a></div></div></nav>
-<main id="top">
-<header class="hero"><div class="wrap hero-grid"><div><div class="eyebrow"><span class="dot"></span>Open to remote, hybrid, on-site & relocation opportunities</div><h1>Ammar<br><span class="grad">Ali.</span></h1><p class="lead"><strong>AI Data, Evaluation & Linguistic Specialist</strong> working across LLM evaluation, Arabic linguistic QA, AI safety, transcription/ASR, multimodal annotation and quality assurance.</p><div class="actions"><a class="btn primary" href="mailto:2007ammarkhaledali@gmail.com">Email me</a><a class="btn" href="Ammar_Ali_Master_CV_2026.pdf" target="_blank">View CV</a><a class="btn" href="https://www.linkedin.com/in/ammar-ali-6a572b383/" target="_blank" rel="noopener">LinkedIn</a></div></div><aside class="signal"><small>Professional focus</small><h2>Careful human judgment for better AI systems.</h2><div class="signal-row"><b>Evaluate</b><span>LLM responses, prompts, search, ads and multimodal outputs.</span></div><div class="signal-row"><b>Review</b><span>QA, guideline compliance, contributor feedback and quality follow-up.</span></div><div class="signal-row"><b>Localize</b><span>Egyptian Arabic, MSA, Gulf and Levantine language quality.</span></div><div class="signal-row"><b>Build</b><span>Applied AI and data projects alongside current university studies.</span></div></aside></div></header>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Ammar Ali, back to top"><span class="brand-mark">AA<span class="brand-dot">.</span></span><span class="brand-text">Ammar Ali<small>AI DATA · LANGUAGE · QUALITY</small></span></a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#expertise">Expertise</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#toolkit">Toolkit</a>
+      </nav>
+      <a class="nav-cta" href="mailto:2007ammarkhaledali@gmail.com?subject=AI%20Data%20Project%20Collaboration">Let's connect <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-controls="mobileNav" aria-expanded="false" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" hidden>
+      <a href="#expertise">Expertise</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#toolkit">Toolkit</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<section id="expertise"><div class="wrap"><div class="section-head"><div><div class="kicker">Core expertise</div><h2>Where I add value.</h2></div><p class="desc">Hands-on experience spans model evaluation, Arabic language quality, AI safety, speech data, multimodal annotation and QA - with a strong focus on clear guidelines and reviewable decisions.</p></div><div class="grid3">
-<article class="card"><div class="num">01 / LLM QUALITY</div><h3>Response & Prompt Evaluation</h3><p>Compare and rate AI outputs for instruction adherence, relevance, factual quality, consistency and preference; create prompts, follow-ups, golden responses and structured justifications.</p><div class="tags"><span class="tag">Preference ranking</span><span class="tag">Prompt creation</span><span class="tag">Evaluation</span></div></article>
-<article class="card"><div class="num">02 / LANGUAGE</div><h3>Arabic Linguistic QA</h3><p>Review dialect fit, grammar, punctuation, formatting, fluency, naturalness and consistency across Egyptian, MSA, Gulf and Levantine Arabic workflows.</p><div class="tags"><span class="tag">Localization</span><span class="tag">Proofreading</span><span class="tag">Dialect QA</span></div></article>
-<article class="card"><div class="num">03 / SAFETY</div><h3>AI Safety & Red Teaming</h3><p>Use single- and multi-turn testing to identify unsafe behavior, privacy leakage, inconsistent personalization and model failure patterns.</p><div class="tags"><span class="tag">Red teaming</span><span class="tag">Safety review</span><span class="tag">Multi-turn</span></div></article>
-<article class="card"><div class="num">04 / SPEECH</div><h3>Transcription & ASR</h3><p>Work across transcription, ASR review, audio segmentation, speaker labeling, voice preference and audio-quality checks.</p><div class="tags"><span class="tag">ASR</span><span class="tag">Segmentation</span><span class="tag">Speaker labeling</span></div></article>
-<article class="card"><div class="num">05 / MULTIMODAL</div><h3>Image & Video Annotation</h3><p>Review visual quality, evaluate instruction compliance, segment continuous video into visible-action intervals and write clear step-level descriptions.</p><div class="tags"><span class="tag">Video</span><span class="tag">Temporal annotation</span><span class="tag">Image QA</span></div></article>
-<article class="card"><div class="num">06 / QUALITY</div><h3>QA & Contributor Coordination</h3><p>Review submissions, provide structured feedback, communicate guidelines and support day-to-day contributor coordination on Arabic data projects.</p><div class="tags"><span class="tag">QA review</span><span class="tag">Guidelines</span><span class="tag">Coordination</span></div></article>
-</div></div></section>
+  <main id="main">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-grain" aria-hidden="true"></div>
+      <div class="hero-orbit orbit-one" aria-hidden="true"></div><div class="hero-orbit orbit-two" aria-hidden="true"></div>
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="status-dot"></span> AI DATA & LANGUAGE PROJECTS</div>
+          <h1 id="heroTitle">Better data.<br><span>Better AI.</span></h1>
+          <p class="hero-lead">From precise annotation to dependable quality operations — I work across Arabic and English AI data, model evaluation, and multimodal workflows.</p>
+          <div class="hero-points" aria-label="Areas of specialization"><span>Text</span><i></i><span>Image</span><i></i><span>Audio</span><i></i><span>Video</span><i></i><span>QA</span></div>
+          <div class="hero-actions"><a class="btn btn-primary" href="#experience">Explore my work <span aria-hidden="true">↗</span></a><a class="btn btn-quiet" href="assets/Ammar_Ali_CV.pdf" download>Download CV <span aria-hidden="true">↓</span></a></div>
+          <div class="hero-meta"><span class="mini-circle"></span> Native Arabic · Professional English <span class="separator"></span> Based in Egypt · Remote collaboration</div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="visual-halo"></div>
+          <svg class="network-globe" viewBox="0 0 520 520" role="presentation" focusable="false">
+            <defs><radialGradient id="globeLight" cx="37%" cy="27%" r="73%"><stop offset="0%" stop-color="#e8f9ff"/><stop offset="63%" stop-color="#b8ddf5" stop-opacity=".34"/><stop offset="100%" stop-color="#66b7e6" stop-opacity=".05"/></radialGradient><clipPath id="sphere"><circle cx="262" cy="250" r="193"/></clipPath></defs>
+            <circle cx="262" cy="250" r="193" fill="url(#globeLight)" stroke="#a8d4ed" stroke-width="1.1"/>
+            <g clip-path="url(#sphere)" fill="none" stroke="#52a4d6" stroke-opacity=".42" stroke-width="1.2">
+              <ellipse cx="262" cy="250" rx="190" ry="65"/><ellipse cx="262" cy="250" rx="191" ry="125"/><ellipse cx="262" cy="250" rx="75" ry="194"/><ellipse cx="262" cy="250" rx="139" ry="194"/><path d="M68 250H456M262 56V444M88 180Q260 155 437 180M90 327Q260 351 438 327" />
+            </g>
+            <g fill="#2fbfd8" fill-opacity=".75"><circle cx="107" cy="137" r="5"/><circle cx="206" cy="94" r="4"/><circle cx="356" cy="121" r="5"/><circle cx="408" cy="245" r="4"/><circle cx="345" cy="382" r="5"/><circle cx="156" cy="369" r="4"/><circle cx="116" cy="275" r="5"/><circle cx="268" cy="252" r="6"/><circle cx="214" cy="311" r="4"/></g>
+            <g fill="none" stroke="#1d91cf" stroke-opacity=".45" stroke-width="1"><path d="M107 137L206 94L356 121L408 245L345 382L214 311L156 369L116 275L268 252L107 137"/><path d="M206 94L268 252L356 121M116 275L214 311L268 252L408 245"/></g>
+            <circle cx="262" cy="250" r="215" fill="none" stroke="#79c8e7" stroke-opacity=".24" stroke-width="1.3" stroke-dasharray="3 10"/>
+          </svg>
+          <div class="visual-pill pill-one"><span class="pill-icon">✦</span> LANGUAGE DATA</div>
+          <div class="visual-pill pill-two"><span class="pill-icon">◎</span> EVALUATION</div>
+          <div class="visual-pill pill-three"><span class="pill-icon">✓</span> QUALITY</div>
+          <div class="visual-caption"><span class="caption-label">FOCUSED ON THE DETAILS</span><strong>Consistency, clarity<br>& human judgment.</strong></div>
+        </div>
+      </div>
+      <div class="scroll-hint" aria-hidden="true"><span>SCROLL TO EXPLORE</span><i></i></div>
+      <div class="hero-edge" aria-hidden="true"></div>
+    </section>
 
-<section id="experience"><div class="wrap"><div class="section-head"><div><div class="kicker">Experience</div><h2>Selected professional work.</h2></div><p class="desc">Project-based work across international AI data vendors, with responsibilities ranging from annotation and evaluation to QA review, red teaming and contributor coordination.</p></div><div class="timeline">
-<article class="role"><div class="time">Jul 2026 - Present</div><div><div class="company">FlyRank AI</div><h3>AI Intern</h3><p>Current AI internship role alongside ongoing computing studies and applied technical projects.</p></div><div class="pill">Current</div></article>
-<article class="role"><div class="time">May 2026 - Present</div><div><div class="company">Welocalize</div><h3>AI Trainer & Linguistic Evaluator</h3><p>Evaluate Arabic AI responses for localization and language quality; create prompts, follow-ups and golden responses, and provide structured justifications across evaluation and safety workflows.</p></div><div class="pill">Language + LLM</div></article>
-<article class="role"><div class="time">Apr 2026 - Present</div><div><div class="company">Invisible Technologies</div><h3>AI Evaluation & Red Teaming Specialist</h3><p>Conduct personalization and red-team evaluations through multi-turn testing to identify model failures, privacy leakage, unsafe behavior and inconsistency.</p></div><div class="pill">Safety</div></article>
-<article class="role"><div class="time">Aug 2025 - 2026</div><div><div class="company">TELUS International AI</div><h3>AI Data Evaluator & QA Reviewer</h3><p>Evaluated text, audio, image, video, voice-preference, search and AI-response tasks, then progressed into QA review of annotator submissions and structured feedback.</p></div><div class="pill">QA</div></article>
-<article class="role"><div class="time">2026</div><div><div class="company">Agents Only</div><h3>Arabic ASR Team Coordinator</h3><p>Coordinated day-to-day Arabic contributors, communicated guideline updates, supported meetings and onboarding, reviewed quality and clarified edge cases with the company-side project lead.</p></div><div class="pill">Coordination</div></article>
-<article class="role"><div class="time">Project-based</div><div><div class="company">Selected additional work</div><h3>Atlas Capture · OneForma · DataForce · Acolad · RWS · Outlier · TaskUs</h3><p>Video temporal annotation, response ranking, Arabic content writing, transcription, model evaluation, safety review and additional guideline-driven AI data workflows.</p></div><div class="pill">Multi-vendor</div></article>
-</div></div></section>
+    <section class="proof-bar" aria-label="Selected organizations and platforms">
+      <div class="container proof-inner"><div class="proof-intro">SELECTED PROJECT EXPERIENCE <span></span></div><div class="proof-names">TELUS Digital <b>·</b> Welocalize <b>·</b> Invisible Technologies <b>·</b> OneForma <b>·</b> Lionbridge <b>·</b> RWS</div></div>
+    </section>
 
-<section id="projects"><div class="wrap"><div class="section-head"><div><div class="kicker">Technical portfolio</div><h2>Applied AI & data projects.</h2></div><p class="desc">Selected projects that extend my human-in-the-loop AI experience into software, machine learning, NLP and analytics.</p></div><div class="projects">
-<article class="project"><div class="kicker">Recruitment AI</div><h3>AI CV Scanner & Job Matching System</h3><p>End-to-end recruitment prototype for CV creation and analysis, semantic job matching, candidate ranking, job dataset analysis and professional CV generation.</p><div class="stack">FastAPI · Streamlit · Sentence Transformers · Pandas</div></article>
-<article class="project"><div class="kicker">LLM Fine-Tuning</div><h3>LoRA vs QLoRA Comparison</h3><p>Compared baseline, LoRA and QLoRA approaches on a Q&A task while tracking BERTScore, ROUGE-L, training time, GPU memory and trainable parameters.</p><div class="stack">OLMo-2-0425-1B-Instruct · PEFT · BERTScore · ROUGE-L</div></article>
-<article class="project"><div class="kicker">Analytics</div><h3>Customer Support Data Analytics</h3><p>Analyzed 85,907 support-ticket rows, engineered temporal and response-time features, and explored CSAT, ticket volume, handling time, shift, tenure and correlations.</p><div class="stack">Python · Pandas · Data Visualization</div></article>
-<article class="project"><div class="kicker">NLP</div><h3>BBC News Text Classification</h3><p>Built a text-classification workflow using cleaning, label encoding, TF-IDF and classical ML models, then compared results with cross-validation and held-out splits.</p><div class="stack">TF-IDF · Logistic Regression · SVM · Naive Bayes</div></article>
-</div></div></section>
+    <section class="section expertise-section" id="expertise" aria-labelledby="expertiseTitle">
+      <div class="container"><div class="section-heading"><div><span class="kicker">WHAT I DO</span><h2 id="expertiseTitle">Broad data experience.<br><em>Consistent quality.</em></h2></div><p>I combine hands-on annotation across data types with the judgment needed for language evaluation, difficult edge cases and reviewer workflows.</p></div>
+        <div class="cap-grid">
+          <article class="cap-card"><div class="card-no">01 / DATA</div><div class="cap-symbol" aria-hidden="true">⌗</div><h3>Data Annotation & Labeling</h3><p>Text labeling, image annotation, content classification, metadata review and project-based data tasks.</p><div class="tags"><span>Text</span><span>Image</span><span>Labeling</span></div></article>
+          <article class="cap-card"><div class="card-no">02 / MODELS</div><div class="cap-symbol" aria-hidden="true">✳</div><h3>LLM & Response Evaluation</h3><p>Response comparison, preference ranking, prompt and response writing, golden responses and structured justifications.</p><div class="tags"><span>LLM Evaluation</span><span>Preference</span></div></article>
+          <article class="cap-card"><div class="card-no">03 / LANGUAGE</div><div class="cap-symbol" aria-hidden="true">ع</div><h3>Arabic Linguistic QA</h3><p>Localization, dialect accuracy, grammar, naturalness, fluency, punctuation and language-focused review.</p><div class="tags"><span>Egyptian</span><span>MSA</span><span>Gulf</span></div></article>
+          <article class="cap-card"><div class="card-no">04 / MULTIMODAL</div><div class="cap-symbol" aria-hidden="true">◈</div><h3>Audio, Video & OCR</h3><p>Transcription, ASR annotation, speaker and audio segmentation, video action boundaries, temporal labels and OCR review.</p><div class="tags"><span>ASR</span><span>Video</span><span>OCR</span></div></article>
+          <article class="cap-card"><div class="card-no">05 / DISCOVERY</div><div class="cap-symbol" aria-hidden="true">⌕</div><h3>Search, Safety & Agents</h3><p>Search relevance, query intent, content moderation, policy-based review, personalization testing and red-team scenarios.</p><div class="tags"><span>Search</span><span>Safety</span><span>Agents</span></div></article>
+          <article class="cap-card cap-card-accent"><div class="card-no">06 / OPERATIONS</div><div class="cap-symbol" aria-hidden="true">◎</div><h3>Quality & Team Coordination</h3><p>Annotator and checker QA, guideline clarification, calibration, RCA, training sessions and feedback loops for Arabic teams.</p><div class="tags"><span>QA / QC</span><span>Calibration</span><span>RCA</span></div></article>
+        </div>
+      </div>
+    </section>
 
-<section id="education"><div class="wrap"><div class="section-head"><div><div class="kicker">Education & capabilities</div><h2>Experience plus technical growth.</h2></div><p class="desc">Professional AI evaluation experience is developing alongside formal computing education and practical machine-learning projects.</p></div><div class="two"><article class="panel"><div class="kicker">Education</div><h3>The Egyptian E-Learning University (EELU)</h3><p>Faculty of Computers and Information Technology, Ain Shams Study Center, Egypt.</p><div class="list"><div class="item"><span class="check">✓</span><span>Current studies: 2026 - Present</span></div><div class="item"><span class="check">✓</span><span>Developing programming, data and applied AI foundations</span></div></div></article><article class="panel"><div class="kicker">Coordination capability</div><h3>500+ contributor network</h3><p>Coordinate access to a project-based network of experienced AI-data contributors and QA reviewers, with strongest coverage across Arabic and English workflows.</p><div class="list"><div class="item"><span class="check">✓</span><span>Guideline rollout and contributor communication</span></div><div class="item"><span class="check">✓</span><span>QA follow-up, meetings and issue escalation</span></div></div></article></div></div></section>
+    <section class="section experience-section" id="experience" aria-labelledby="experienceTitle">
+      <div class="container"><div class="section-heading"><div><span class="kicker">PROFESSIONAL EXPERIENCE</span><h2 id="experienceTitle">Selected work.<br><em>Real responsibilities.</em></h2></div><p>Project-based experience across AI data vendors and international teams. Below is a selection of roles; the complete record is available on LinkedIn.</p></div>
+      <div class="role-list">
+        <article class="role" ><div class="role-date">Aug 2026 — Present</div><div class="role-main"><div class="role-top"><div><h3>QA Support | Arabic Quality & Team Coordination</h3><div class="role-company">TELUS Digital</div></div><span class="role-type">QUALITY OPERATIONS</span></div><p>Support the Arabic contributor team through QA monitoring, internal training, guideline updates, client calibrations and Root Cause Analysis. Work directly with project and quality managers on recurring issues and corrective actions.</p><div class="role-keywords">QA review · Client calibration · Training · RCA</div></div></article>
+        <article class="role"><div class="role-date">Jan — Sep 2026</div><div class="role-main"><div class="role-top"><div><h3>Arabic ASR Quality Assurance & Team Coordinator</h3><div class="role-company">Agents Only Technologies</div></div><span class="role-type">ARABIC ASR</span></div><p>Reviewed work from labelers and checkers, supported quality follow-up and contributor feedback, clarified guidelines, and coordinated with project and quality managers on issues and corrective actions.</p><div class="role-keywords">ASR · Checker/labeler review · Contributor support</div></div></article>
+        <article class="role"><div class="role-date">Mar — Aug 2026</div><div class="role-main"><div class="role-top"><div><h3>Gulf Arabic Localization & Response Evaluator</h3><div class="role-company">Welocalize</div></div><span class="role-type">LANGUAGE EVALUATION</span></div><p>Compared AI-generated responses in Gulf Arabic, assessed linguistic naturalness and locale fit, documented language issues and provided justified preference ratings.</p><div class="role-keywords">Gulf Arabic · Localization · Response comparison</div></div></article>
+        <article class="role"><div class="role-date">Apr — Aug 2026</div><div class="role-main"><div class="role-top"><div><h3>Egyptian Arabic & MSA Prompt Writer / Evaluator</h3><div class="role-company">Welocalize</div></div><span class="role-type">CONTENT CREATION</span></div><p>Created original prompts, conversational follow-ups, written responses and golden responses in Egyptian Arabic and Modern Standard Arabic; evaluated model responses against project criteria.</p><div class="role-keywords">Prompt writing · Golden responses · Egyptian Arabic / MSA</div></div></article>
+        <article class="role"><div class="role-date">Aug 2025 — May 2026</div><div class="role-main"><div class="role-top"><div><h3>AI Data Annotator & Multimodal Evaluator</h3><div class="role-company">TELUS Digital</div></div><span class="role-type">MULTIMODAL</span></div><p>Evaluated text, audio, image and video outputs; compared AI responses; completed transcription and content-quality assessments according to detailed task guidelines.</p><div class="role-keywords">Text · Audio · Image · Video</div></div></article>
+        <article class="role"><div class="role-date">Apr — Jul 2026</div><div class="role-main"><div class="role-top"><div><h3>AI Personalization & Red Teaming Evaluator</h3><div class="role-company">Meridial Marketplace, by Invisible</div></div><span class="role-type">MODEL SAFETY</span></div><p>Designed challenging multi-turn scenarios and documented failures related to personalized context, privacy-sensitive behavior and inconsistent assistant responses.</p><div class="role-keywords">Adversarial testing · Personalization · Model behavior</div></div></article>
+      </div>
+      <details class="more-roles"><summary>View additional project experience <span>＋</span></summary><div class="more-roles-grid">
+        <div><strong>Workflow Writer | Generalist</strong><span>Mercor · Sep 2026 — Present</span><p>Structured task documentation and macOS-based workflows.</p></div>
+        <div><strong>AI Response Evaluator & Speech Data Annotator</strong><span>OneForma · Mar — Dec 2025</span><p>Preference ranking, transcription, audio segmentation and speaker labeling.</p></div>
+        <div><strong>Search Relevance & Query Evaluator</strong><span>Lionbridge · Jan — Jul 2025</span><p>E-commerce query intent and search-result relevance assessment.</p></div>
+        <div><strong>Video Annotation & Temporal Segmentation Specialist</strong><span>Atlas Capture · 2025 — 2026</span><p>Segmenting actions and writing precise English step descriptions.</p></div>
+        <div><strong>Gaming Content Moderator | Trust & Safety</strong><span>TaskUs · Jan — May 2026</span><p>Safety and policy evaluation of gaming chat content.</p></div>
+        <div><strong>AI Agent & Digital Content Evaluator</strong><span>T-Maxx International · Jan 2025 — Jan 2026</span><p>Agent behavior, content review and spreadsheet-based evaluation.</p></div>
+        <div><strong>AI Trainer & LLM Evaluator</strong><span>Outlier · Apr — Sep 2026</span><p>Guideline-based AI response annotation and model-quality ratings.</p></div>
+        <div><strong>AI Data Annotator & Evaluator</strong><span>RWS · Oct 2025 — Jul 2026</span><p>Text, image and audio labeling and review assignments.</p></div>
+        <div><strong>Freelance Data Annotator & Evaluator</strong><span>Mindrift · Project-based</span><p>Short-term labeling, transcription and content evaluation gigs.</p></div>
+        <div><strong>Social Media & Search Relevance Evaluator</strong><span>Appen · 2020 — 2024</span><p>Project-based social content ratings and search relevance evaluation.</p></div>
+        <div><strong>Arabic Content Writer | MSA</strong><span>DataForce · Feb — Apr 2026</span><p>Original written stories and language data in Modern Standard Arabic.</p></div>
+        <div><strong>Artificial Intelligence Intern</strong><span>FlyRank AI · Jul — Oct 2026</span><p>AI tools and general AI fluency assignments.</p></div>
+      </div></details>
+      <div class="section-link"><a href="https://www.linkedin.com/in/ammar-ali-6a572b383/" target="_blank" rel="noopener noreferrer">View full experience on LinkedIn <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
 
-<section><div class="wrap"><div class="section-head"><div><div class="kicker">Tools & languages</div><h2>Working toolkit.</h2></div><p class="desc">Comfortable moving between annotation platforms, quality-review systems and remote collaboration environments.</p></div><div class="chips"><span class="chip">SuperAnnotate</span><span class="chip">CVAT</span><span class="chip">Human Signal</span><span class="chip">Lark</span><span class="chip">Microsoft Teams</span><span class="chip">Slack</span><span class="chip">Discord</span><span class="chip">Google Workspace</span><span class="chip">Jira</span><span class="chip">Hubstaff</span><span class="chip">Arabic - Native Egyptian</span><span class="chip">MSA - Strong professional</span><span class="chip">Gulf Arabic - Strong professional</span><span class="chip">Levantine Arabic - Strong professional</span><span class="chip">English - C1 (self-assessed)</span></div></div></section>
+    <section class="section projects-section" id="projects" aria-labelledby="projectsTitle">
+      <div class="container"><div class="section-heading"><div><span class="kicker">TECHNICAL PROJECTS</span><h2 id="projectsTitle">A practical<br><em>technical foundation.</em></h2></div><p>Selected academic and independent work alongside professional data operations. These are prototypes and learning projects, not client deliverables.</p></div>
+      <div class="project-grid">
+        <article class="project-card"><div class="project-top"><span>01 / NLP & MATCHING</span><span class="project-symbol">↗</span></div><div class="project-art art-cv" aria-hidden="true"><span class="art-page"><b></b><i></i><i></i><i></i></span><span class="art-node">82%</span><span class="art-line"></span><span class="art-tag">SEMANTIC MATCH</span></div><h3>AI CV Scanner & Job Matching</h3><p>Recruitment prototype combining CV analysis, semantic similarity and job matching across structured candidate and role data.</p><div class="project-stack">Python · FastAPI · Streamlit · Sentence Transformers</div></article>
+        <article class="project-card"><div class="project-top"><span>02 / MODEL ADAPTATION</span><span class="project-symbol">↗</span></div><div class="project-art art-lora" aria-hidden="true"><span class="bars"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="art-tag">LoRA / QLoRA</span><span class="art-chartline"></span></div><h3>LLM Fine-Tuning Comparison</h3><p>Compared baseline, LoRA and QLoRA approaches using training efficiency and language-generation evaluation metrics.</p><div class="project-stack">Python · PEFT · ROUGE-L · BERTScore</div></article>
+        <article class="project-card"><div class="project-top"><span>03 / ACCESSIBILITY · IN PROGRESS</span><span class="project-symbol">↗</span></div><div class="project-art art-sign" aria-hidden="true"><span class="sign-orbit one"></span><span class="sign-orbit two"></span><span class="sign-core">SL</span><span class="sign-wave">⌁⌁⌁</span><span class="art-tag">SIGN ↔ LANGUAGE</span></div><h3>SilentBridge AI</h3><p>University prototype exploring Egyptian Sign Language recognition and Arabic communication using computer vision and language interfaces.</p><div class="project-stack">Computer Vision · Machine Learning · Flutter</div></article>
+      </div>
+      </div>
+    </section>
 
-<section id="contact"><div class="wrap"><div class="cta"><div class="kicker">Contact</div><h2>Open to AI data, evaluation, QA and applied AI opportunities.</h2><p>Available for remote, hybrid, on-site and relocation opportunities, including project-based AI data work, internships and quality-focused evaluation roles.</p><div class="actions"><a class="btn primary" href="mailto:2007ammarkhaledali@gmail.com">2007ammarkhaledali@gmail.com</a><a class="btn" href="tel:+201155304924">+20 115 530 4924</a><a class="btn" href="https://www.linkedin.com/in/ammar-ali-6a572b383/" target="_blank" rel="noopener">LinkedIn</a></div></div></div></section>
-</main>
-<footer><div class="wrap foot"><span>© 2026 Ammar Ali</span><span>Shubra El-Kheima, Qalyubia, Egypt</span></div></footer>
+    <section class="collab-section" aria-labelledby="collabTitle"><div class="container collab-inner"><div><span class="kicker">BEYOND INDIVIDUAL TASKS</span><h2 id="collabTitle">Arabic-language quality<br>and team support.</h2><p>Alongside individual annotation and evaluation work, I can contribute to guideline rollouts, quality monitoring, reviewer feedback, contributor training and communication across Arabic-language delivery teams.</p></div><div class="collab-items"><div><span>01</span><strong>Clarify</strong><p>Translate complex guidelines into consistent team decisions.</p></div><div><span>02</span><strong>Review</strong><p>Monitor submissions, find recurring issues, support corrective action.</p></div><div><span>03</span><strong>Coordinate</strong><p>Connect contributors with project and quality stakeholders.</p></div></div></div></section>
+
+    <section class="section toolkit-section" id="toolkit" aria-labelledby="toolkitTitle"><div class="container"><div class="section-heading"><div><span class="kicker">TOOLS & LANGUAGES</span><h2 id="toolkitTitle">Adaptable across<br><em>teams and workflows.</em></h2></div><p>Project-specific systems change. Strong guideline interpretation, repeatable review habits, and clear communication stay essential.</p></div><div class="toolkit-grid"><div class="toolkit-group"><h3>Data & Review Platforms</h3><div class="tool-pills"><span>SuperAnnotate</span><span>CVAT</span><span>Human Signal</span><span>Project-specific QA tools</span></div></div><div class="toolkit-group"><h3>Collaboration & Operations</h3><div class="tool-pills"><span>Lark</span><span>Slack</span><span>Microsoft Teams</span><span>Google Workspace</span><span>Jira</span><span>Discord</span></div></div><div class="toolkit-group"><h3>Technical Projects</h3><div class="tool-pills"><span>Python</span><span>Pandas</span><span>scikit-learn</span><span>FastAPI</span><span>Streamlit</span><span>NLP</span></div></div><div class="toolkit-group"><h3>Languages & Locales</h3><p><strong>Arabic</strong> — native, with project experience in Egyptian Arabic and Modern Standard Arabic. Gulf Arabic localization experience; familiarity with Levantine varieties.</p><p><strong>English</strong> — professional working proficiency.</p></div></div><div class="education"><div><span class="kicker">EDUCATION</span><h3>The Egyptian E-Learning University (EELU)</h3><p>Faculty of Computers & Information Technology · 2026 — Present</p></div><span class="education-pill">Current studies</span></div></div></section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contactTitle"><div class="container contact-inner"><span class="kicker">LET'S COLLABORATE</span><h2 id="contactTitle">Have an AI data project<br>in mind?</h2><p>Open to annotation, evaluation, linguistic review, QA support and Arabic-language team coordination opportunities.</p><div class="contact-actions"><a href="mailto:2007ammarkhaledali@gmail.com?subject=AI%20Data%20Project%20Collaboration" class="btn btn-white">Email me <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/ammar-ali-6a572b383/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white">Connect on LinkedIn <span aria-hidden="true">↗</span></a></div><div class="contact-address">2007ammarkhaledali@gmail.com</div></div></section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><span>© <span id="year">2026</span> Ammar Ali</span><span>AI Data · Language · Evaluation · Quality</span><a href="#top">Back to top ↑</a></div></footer>
+  <script src="script.js"></script>
 </body>
 </html>
